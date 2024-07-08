@@ -9,7 +9,7 @@ const SearchWrapper = ({ value }: { value: string }) => {
 export async function getServerSideProps({ res, query }: any) {
   res.setHeader(
     "Cache-Control",
-    `max-age=21600, s-maxage=21600, stale-while-revalidate=518400`
+    `s-maxage=21600, stale-while-revalidate=518400`
   );
 
   return {
